@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suhana's Portflio</title>
+    <script src="https://kit.fontawesome.com/35be76ff0d.js" crossorigin="anonymous"></script>
+    </head>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        
+        nav{
+            height: 80px;
+            background: black;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            padding:0px 50px 0px 100px;
+           
+        }
+        nav .logo {
+            width: 60px;
+            height: 60px;
+            padding-top: 1rem;
+            
+           
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+           
+        }
+        nav ul li{
+            margin: 0px 5px;
+            
+        }
+        nav ul li a{
+            color:white;
+            text-decoration: none;
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: 800px;
+            background: black;
+            padding: 8px 10px;
+            border-radius: 5px;
+            transition: all 0.45s ease;
+           
+
+        }
+        nav ul li a:hover,nav ul li a.active{
+            color: black;
+            background-color: darkgray;
+           
+
+        }
+
+        
+        body{
+            background:black;
+            font-family: sans-serif;
+            /*padding: 1rem;*/
+            
+        }
+        nav .menu-btn i{
+            color: white;
+            font-size: 20px;
+            cursor:pointer;
+            display: none;
+        }
+        #click{
+            display: none;
+        }
+        @media (max-width:940px) {
+            nav ul{
+                position: fixed;
+                top:80px;
+                left:-100%;
+                background:black;
+                height:100vh;
+                width:100%;
+                display: block;
+                text-align: center;
+                transition:all 0.35s ease;   
+                
+                
+            }
+            #click:checked ~ ul{
+                left:0%;
+            }
+            #click:checked ~ .menu-btn i:before{
+                content:"\f00d";
+            }
+            nav .menu-btn i{
+                display: block;
+            }
+            nav ul li{
+                margin:40px 0;
+
+            }
+            nav ul li a{
+                font-size: 20px;
+                display: block;
+                padding-right: 7rem;
+            }
+            nav ul li a:hover,nav ul li a.active{
+            color:rgb(184, 184, 167);
+            background-color:black;
+           
+
+        }
+        }
+        @media (max-width:1264px){
+            .home{
+                padding-left: 20rem;
+                padding-top: 12rem;
+               padding-bottom: 15rem;
+            }
+        }
+        @media (max-width:1140px){
+            .home{
+                padding-right: 10rem;
+            }
+        }
+        @media (max-width:936px){
+            .container{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                
+                
+            }
+            .home-text {
+                margin-right: 5rem;
+                
+               
+              
+
+                
+            }
+           
+           
+        }
+        @media(max-width:560){
+            
+            .home-text{
+                margin-right: 30px;
+            }
+        }
+        
+
+       
+       @media(max-width:768){
+           .home-text{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               text-align: center;
+           }
+           .home{
+               display: flex;
+           }
+
+       }
+       @media(max-width:412){
+           .home{
+               display: flex;
+               flex-direction: column;
+
+           }
+           
+       }
+       
+
+       
+       
+
+       
+      
+        /*CONTAINER*/
+        .home .container{
+            
+           display: flex;
+           gap:2rem;
+           margin-left: 20px;
+           margin-top: 2rem;
+
+            
+            
+        }
+       
+       
+        .home .person{
+            
+            background-color:darkgrey;
+            
+            border-radius:70px 0 70px 0;
+            overflow: hidden;
+            max-width:max-content;
+           margin-top: 3rem;
+            width: 500px;
+            height: 460px;
+            flex:6;
+        }
+      
+        
+        /*Suhana text*/
+        .home-text{
+           
+            
+            display:flex;
+            flex-direction: column;
+            color: #fff;
+            padding-left: 5rem ;
+            flex: 8;
+            /*margin-top: 220px;*/
+            
+            
+            
+
+        }
+        .home-text h6{
+            text-transform: uppercase;
+            letter-spacing:2rem;
+            font-size: 25px;
+           /* margin-bottom: 20px;*/
+            
+
+        }
+        .home-text h1{
+            text-transform: uppercase;
+            font-size: 90px;
+            letter-spacing: 1rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+        }
+
+        .home-text p{
+            
+            
+           
+           /* max-width: 500px;*/
+            font-size: 18px;
+            /*margin-top: 90px;*/
+        }
+
+        .home-text .name span{
+           margin-right: 25px;
+           /*display: inline-block;*/
+            
+        }
+        .home-text.name span:last-child{
+            margin-right: 0;
+
+        }
+      
+        /*Default state hide*/
+        .home .person img,.Freelancer span,.name span,.small-intro span,.menu li,nav .logo{
+            opacity:0;
+        }
+        
+
+
+
+        
+
+    </style>
+   
+   
+<body>
+    <div id="bg"></div>
+    <!--javascript-->
+    <script type="text/javascript" src="./js/particles.min.js">  </script>
+    <script type="text/javascript" src="./js/custom.js">  </script>
+
+    <div class="wrapper">
+        <nav>
+            <div class="logo"><img src="./27-globe-outline.gif" alt="image" ></div>
+            <div class="menu">
+                <input type="checkbox" id="click">
+                <label for="click"class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul>
+                   
+                    <li><a class="active" href="#home-main">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li class="btn"><a href="#footer">Contact</a></li>
+                </ul>
+
+            </div>
+            
+        </nav>
+    </div>
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!--lettering js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
+  <!--anime js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          $(".name, .Freelancer, .small-intro").lettering();
+        
+
+          //images overflow effect//
+          anime({
+              targets: '.home .person-overlay',
+              translateX:1100,
+              delay:700,
+              easing:'easeInSine'
+
+          })
+          anime({
+              targets: '.home .person img',
+              opacity:1,
+              delay:200,
+              easing:'easeInSine'
+          })
+
+          anime({
+              targets: '.Freelancer span',
+              opacity:1,
+              duration:500,
+              easing:'easeInSine',
+              delay:anime.stagger(100, {start:3000})
+          })
+          //suhana fade in//
+          anime({
+              targets: '.name span',
+              opacity:1,
+              duration:600,
+              easing:'easeInSine',
+              delay:anime.stagger(100, {start:4500})
+
+          })
+          anime({
+              targets: 'nav .logo',
+              opacity:1,
+              duration:1000,
+              easing:'easeInSine',
+              delay:anime.stagger(100, {start:4500})
+
+          })
+          anime({
+              targets: '.menu li',
+              opacity:1,
+              duration:3000,
+              delay:anime.stagger(150,{start:1050})
+          })
+          //intro
+          anime({
+              targets:'.small-intro span',
+              opacity:1,
+              duration:700,
+              easing:'easeInSine',
+              delay:anime.stagger(40, {start:7000})
+          })
+        });
+
+      
+  </script>
+
+
+
+   <!--frst section-->
+   <section class="home-main">
+    <div class="home">
+        <div class="container">
+            <div class="person">
+                <span class="person-overlay"></span>
+                <img src="photo.png" alt="image">
+            </div>
+            <div class="home-text">
+                <h6 class="Freelancer">Freelancer</h6>
+                <h1 class="name">Suhana</h1>
+                <p class="small-intro">Hello, this is Suhana and
+                    am looking forward for more projects that
+                    excels my app and web developemnt as well as ui-ux designing capabilites.
+                </p>
+            </div>
+        </div>
+    </div>
+
+   </section>
+   
+
+
+
+   <!--start of service section-->
+   <section id="services">
+       <div class="container">
+           <h2 class="section-heading">Services</h2>
+           <div class="all-items">
+            <div class="item">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+               
+               <h3 class="item-heading">Web Develop.ment</h3>
+               <p class="item-description">Creates reliable and high-performing 
+                   web-based applications and services. 
+                   A full-stack developer with a keen focus on the 
+                   underlying software and databses and visual design 
+                   and it's interface.
+               </p>
+            </div>
+            <div class="item">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+               
+               <h3 class="item-heading">App Develop.ment</h3>
+               <p class="item-description">Developing software solutions to meet customer needs.
+                   Creating and imple.menting the source code of new applications. 
+                   Evaluating existing applications and performing updates and modifications.
+               </p>
+            </div>
+            <div class="item">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                      </svg>
+                </div>
+               
+               <h3 class="item-heading">UI/UX Designing</h3>
+               <p class="item-description">Creating user flows, wireframes, prototypes and mockups and original graphic designs 
+                   Identifying and troubleshooting UX problems. 
+                   Collaborating effectively with product, engineering, and manage.ment teams.
+               </p>
+            </div>
+            
+        </div>
+       </div>
+   </section>
+   <!--end of service section-->
+   <!--Start of stats section-->
+   <section id="stats">
+       <div class="container">
+           <h2 class="section-heading">Stats</h2>
+           <div class="all-items">
+               <div class="item">
+                   <h2 class="number">150+</h2>
+                   <h3 class="stats-sub-heading">Projects done.</h3>
+                   <p>Successful completion of projects with dedication and full customer satisfaction</p>
+               </div>
+               <div class="item">
+                <h2 class="number">100+</h2>
+                <h3 class="stats-sub-heading">Happy Clients.</h3>
+                <p>Delivering clients with satisafactory projects and appealing outputs</p>
+            </div>
+            <div class="item">
+                <h2 class="number">6+</h2>
+                <h3 class="stats-sub-heading">Years of experience</h3>
+                <p>Brushing and developing new skillsets through project proposals and self-learning.</p>
+            </div>
+           </div>
+       </div>
+   </section>
+   <!--End of stats section-->
+   <!--Start of about section-->
+   <section id="about">
+       <div class="container">
+           <h2 class="section-heading">About</h2>
+           <div class="wrapper">
+               <div class="left">
+                <div class="card">
+                    <div class="image">
+ 
+                     <img src="photo.png"">
+                    </div>
+                    <p class="card-desc">Dedicated 6years of experience as a full-stack developer.
+                        Fully satisfied clients with  
+                        enumerous diverse project proposals.
+                        I also have a meticulous eye for detail and a concentrated
+                         focus on reader experience. Hence, blog writing is also one of my concern.Excels 
+                         in creative UI designs with variable approaches, flows and wireframes
+                          and troubleshoots UX problems.</p>
+                        
+                </div>
+               </div>
+               <div class="right">
+                   <p class="subheading">Hi,this is Suhana</p>
+                   <h2 class="caption">Freelancer</h2>
+                   <p class="right-text">I am an experienced 
+                       software developer and also graphic designer. My works are mostly on web technolgies.
+                       You will get a premium 
+                       quality, handcrafted website. You will get a genuine and serious bid from me.
+                       Feel free to contact me to discuss your projects.</p>
+                   <div class="buttons">
+                       <a href="./Resume.pdf" class="primary-button" download >Download Resume</a>
+                       <a href="#"class="primary-button-outline">Hire Me</a>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+   <!--End of about section-->
+   <!--footer section-->
+   <section id="footer">
+       <div class="container">
+           <footer>
+               <div class="col-1">
+                   <h2 class="contact-info">CONTACT </h2>
+                   <p class="number">Phone no: +919061317515</p>
+                   <p class="mail">Email: suhanajabinpk@gmail.com
+                   </p>
+               </div>
+               
+               <div class="col-2">
+                   <p>Linkedin</p>
+                   <p>Instagram</p>
+                   <p>Github</p>
+                   <p>Facebook</p>
+               </div>
+           </footer>
+
+       </div>
+   </section>
+   <!--end of footer section-->
+   <script src="./main.js"></script>
+
+    
+</body>
+</html>
